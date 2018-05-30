@@ -45,7 +45,7 @@ module.exports = {
     },
 
     add: function(place, userId) {
-        // console.log(place);
+        console.log(place);
         console.log(userId);
         // create takes an argument of an object for our model
         var isPrivate = (place.isPrivate === "on");
@@ -57,7 +57,9 @@ module.exports = {
                 createdBy: userId,
                 updatedBy: userId
             }).then(function(dbResults) {
-                // We have access to the new todo as an argument inside of the callback function
+
+                console.log(dbResults)
+                    // We have access to the new todo as an argument inside of the callback function
                 return dbResults;
             })
             .catch(function(err) {
