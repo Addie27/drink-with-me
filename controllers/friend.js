@@ -69,13 +69,13 @@ module.exports = {
     //Find all user's friends
     getAllByUser: function(userId) {
         var $getAllByUser = db.sequelize.query(' \
-        SELECT Users.* FROM Friends \
+        SELECT Distinct Users.* FROM Friends \
         INNER JOIN Users ON Users.id = Friends.friendid \
         WHERE Friends.userId = \
         ' + userId + ' OR Friends.friendId = ' + userId, null, { raw: false }, {
                 userId: userId
             }).then(function(dbResults) {
-                return dbResults;
+                return dbResults[0];
             })
             .catch(function(err) {
 
