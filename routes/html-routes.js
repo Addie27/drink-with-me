@@ -169,7 +169,7 @@ module.exports = function(app) {
         } else {
             place.findOneByName(req.params.name)
                 .then(function(dbResults) {
-
+                    console(dbResults)
                     var hbsObject = {
                         places: dbResults,
                         place: true
