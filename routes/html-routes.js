@@ -105,7 +105,7 @@ module.exports = function(app) {
                     console.log(dbResults);
                     var hbsObject = {
                         user: req.user,
-                        friends: dbResults,
+                        friends: dbResults[0],
                         layout: "main",
                         showFriends: true,
                         isMe: true

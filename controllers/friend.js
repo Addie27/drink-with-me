@@ -75,7 +75,7 @@ module.exports = {
         ' + userId + ' OR Friends.friendId = ' + userId, null, { raw: false }, {
                 userId: userId
             }).then(function(dbResults) {
-                return dbResults[0];
+                return dbResults;
             })
             .catch(function(err) {
 
