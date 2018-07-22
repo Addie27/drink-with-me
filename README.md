@@ -42,8 +42,7 @@ A demo of the application is hosted <a href="https://shielded-springs-87968.hero
 
 - - - 
 ## Design Docs
-[Application flow](AppFlow.md)
+[Application flow](./AppFlow.md)
 
-[Development Design](DevDesign.md)
+[Development Design](./DevDesign.md)
 
-[Handlebars Templates](Handlebars.md)
